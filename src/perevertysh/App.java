@@ -33,6 +33,25 @@ class App {
         String rStr = new String(rChStr);
         System.out.println("Перевертыш: "+rStr);
         //решение с помощью класса StringBuilder
+        StringBuilder sbStr = new StringBuilder(str);
+        System.out.println("перевертыш2: "+sbStr.reverse().toString());
+        //1 находим index пробела в строке
+        //2 если в строке нет пробела то нет второго слова
+        //3 если один символ пробела в строке, то выводим с индекса
+        // первого пробела до конца строки
+        //4 если в строке два пробела, то выводим подстроку от первого
+        // пробела до второго
+        
+        int firstSpace = str.indexOf(" ");
+        int secondSpace = str.indexOf(" ", firstSpace+1);
+        if(firstSpace < 0) {
+            System.out.println("Второго слова нет");
+        }else if(secondSpace < 0){
+            System.out.println("Второе слово: " + str.substring(firstSpace));          
+        }else{
+            System.out.println("Второе слово: " + str.substring(firstSpace+1,secondSpace));           
+        }
+        //второй способ решения
        
    
     }
