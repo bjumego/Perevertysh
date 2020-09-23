@@ -52,8 +52,15 @@ class App {
             System.out.println("Второе слово: " + str.substring(firstSpace+1,secondSpace));           
         }
         //второй способ решения
+        System.out.println("второй способ решения: ");
+        String[] arrWords = str.split(" ");
+        if (arrWords[1] != null) {
+            System.out.println("второе слово:" + arrWords[1]);
+        }else{
+            System.out.println("нет второго слова");
+        }
        
-   
+        
     }
     
 }
